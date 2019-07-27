@@ -1,100 +1,61 @@
-.hex {
-    float: left;
-    margin-right: -26px;
-    margin-bottom: -50px;
-    text-align: left;
-}
-
-.hex .blankleft {
-    float: left;
-    width: 0;
-    border-right: 30px solid #FFFFFF;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
-}
-
-.hex .blankmiddle {
-    float: left;
-    width: 60px;
-    height: 104px;
-    background: #FFFFFF;
-}
-
-.hex .blankright {
-    float: left;
-    width: 0;
-    border-left: 30px solid #FFFFFF;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
-}
-
-.hex .left {
-    float: left;
-    width: 0;
-    border-right: 30px solid #6C6;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
-}
-
-.hex .middle {
-    float: left;
-    width: 60px;
-    height: 104px;
-    background: #6C6;
-}
-
-.hex .right {
-    float: left;
-    width: 0;
-    border-left: 30px solid #6C6;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
+body {
+    background: #000000;
 }
 
 .hex-row {
     clear: left;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
 }
 
 .hex.even {
     margin-top: 53px;
 }
 
-.hex2 {
-    float: left;
-    margin-right: -26px;
-    margin-bottom: -50px;
-    text-align: left;
+.blankhexagon {
+    position: relative;
+    display: inline-block;
+    /* left/right margin approx. 25% of .hexagon width + spacing */
+    margin: -1px 16px;
+    background-color: #000000;
+    text-align: center;
 }
 
-.hex2 .left {
-    float: left;
-    width: 0;
-    border-right: 30px solid #FF00FF;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
+.blankhexagon, .blankhexagon::before, .blankhexagon::after {
+    /* easy way: height is width * 1.732
+    actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+    remove border-radius for sharp corners on hexagons */
+    width: 67px;
+    height: 116px;
 }
 
-.hex2 .middle {
-    float: left;
-    width: 60px;
-    height: 104px;
-    background: #FF00FF;
+.blankhexagon::before, .blankhexagon::after {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    left: 0;
 }
 
-.hex2 .right {
-    float: left;
-    width: 0;
-    border-left: 30px solid #FF00FF;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
+.blankhexagon::before {
+    transform: rotate(-60deg);
+}
+
+.blankhexagon::after {
+    transform: rotate(60deg);
+}
+
+.blankhexagon:nth-child(even) {
+    /* top approx. 50% of .hexagon height + spacing */
+    top: 59px;
 }
 
 .hexagon {
     position: relative;
     display: inline-block;
     /* left/right margin approx. 25% of .hexagon width + spacing */
-    margin: 1px 18px;
-    background-color: #FF00FF;
+    margin: -1px 16px;
+    background-color: #3fffc1;
     text-align: center;
 }
 
@@ -124,4 +85,43 @@
 .hexagon:nth-child(even) {
     /* top approx. 50% of .hexagon height + spacing */
     top: 59px;
+}
+
+.hexagontent {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 140%;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    z-index: 100;
+}
+
+#square1 {
+    background-color: aqua;
+}
+
+#square2 {
+    background-color: azure;
+}
+
+#square3 {
+    background-color: yellow;
+}
+
+#square4 {
+    background-color: blue;
+}
+
+#square5 {
+    background-color: green;
+}
+
+#square6 {
+    background-color: red;
+}
+
+#square7 {
+    background-color: purple;
 }

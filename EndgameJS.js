@@ -1,4 +1,4 @@
 function testFunction() {
-    var myElement = document.getElementsByClassName(hex2);
-
+    var myElement = document.getElementById(square8);
+    myElement.style.backgroundColor = "cyan";
 }

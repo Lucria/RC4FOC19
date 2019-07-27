@@ -4,233 +4,164 @@
     <meta charset="UTF-8">
     <title>RC4 Endgame Day 2 Game Map</title>
     <link href="EndgameCSS.css" rel="stylesheet">
+    <style>
+        h1 {
+            color: white
+        }
+    </style>
 </head>
-<script src="EndgameJS.js" type='text/javascript'></script>
 <body>
 <h1>Realtime Update of Bases</h1>
 <button onclick="testFunction()"> Press this!</button>
 <br/>
+<br/>
 
 <!-- First Row -->
 <div class="hex-row">
-    <div class="hexagon"></div>
-    <div class="hexagon"></div>
-
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square3">
+        <div class="hexagontent">
+            3
+        </div>
     </div>
-    <div class="hex even" id="3">
-        <div class="left"></div>
-        <div class="middle">3</div>
-        <div class="right"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square13">
+        <div class="hexagontent">
+            13
+        </div>
     </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even" id="13">
-        <div class="left"></div>
-        <div class="middle">13</div>
-        <div class="right"></div>
-    </div>
+    <div class="blankhexagon"></div>
 </div>
+
 <!-- Second Row -->
 <div class="hex-row">
-    <div class="hex">
-        <div class="left"></div>
-        <div class="middle" id="1">1</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square1">
+        <div class="hexagontent">
+            1
+        </div>
     </div>
-    <div class="hex even" id="4">
-        <div class="left"></div>
-        <div class="middle">4</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square4">
+        <div class="hexagontent">
+            4
+        </div>
     </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square14">
+        <div class="hexagontent">
+            14
+        </div>
     </div>
-    <div class="hex even">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even" id="14">
-        <div class="left"></div>
-        <div class="middle">14</div>
-        <div class="right"></div>
-    </div>
-    <div class="hex" id="19">
-        <div class="left"></div>
-        <div class="middle">19</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square19">
+        <div class="hexagontent">
+            19
+        </div>
     </div>
 </div>
 
 <!-- Third Row -->
 <div class="hex-row">
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square5">
+        <div class="hexagontent">
+            5
+        </div>
     </div>
-    <div class="hex even" id="5">
-        <div class="left"></div>
-        <div class="middle">5</div>
-        <div class="right"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square10">
+        <div class="hexagontent">
+            10
+        </div>
     </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square15">
+        <div class="hexagontent">
+            15
+        </div>
     </div>
-    <div class="hex even" id="10">
-        <div class="left"></div>
-        <div class="middle">10</div>
-        <div class="right"></div>
-    </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even" id="15">
-        <div class="left"></div>
-        <div class="middle">15</div>
-        <div class="right"></div>
-    </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
+    <div class="blankhexagon"></div>
 </div>
 
 <!-- Fourth Row -->
 <div class="hex-row">
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square6">
+        <div class="hexagontent">
+            6
+        </div>
     </div>
-    <div class="hex even" id="6">
-        <div class="left"></div>
-        <div class="middle">6</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square9">
+        <div class="hexagontent">
+            9
+        </div>
     </div>
-    <div class="hex" id="9">
-        <div class="left"></div>
-        <div class="middle">9</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square11">
+        <div class="hexagontent">
+            11
+        </div>
     </div>
-    <div class="hex even" id="11">
-        <div class="left"></div>
-        <div class="middle">11</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square12">
+        <div class="hexagontent">
+            12
+        </div>
     </div>
-    <div class="hex" id="12">
-        <div class="left"></div>
-        <div class="middle">12</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square16">
+        <div class="hexagontent">
+            16
+        </div>
     </div>
-    <div class="hex even" id="16">
-        <div class="left"></div>
-        <div class="middle">16</div>
-        <div class="right"></div>
-    </div>
+    <div class="blankhexagon"></div>
 </div>
 
 <!-- Fifth Row -->
 <div class="hex-row">
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square7">
+        <div class="hexagontent">
+            7
+        </div>
     </div>
-    <div class="hex even" id="7">
-        <div class="left"></div>
-        <div class="middle">7</div>
-        <div class="right"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square17">
+        <div class="hexagontent">
+            17
+        </div>
     </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even" id="17">
-        <div class="left"></div>
-        <div class="middle">17</div>
-        <div class="right"></div>
-    </div>
+    <div class="blankhexagon"></div>
 </div>
 
 <!-- Sixth Row -->
 <div class="hex-row">
-    <div class="hex" id="2">
-        <div class="left"></div>
-        <div class="middle">2</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square2">
+        <div class="hexagontent">
+            2
+        </div>
     </div>
-    <div class="hex even" id="8">
-        <div class="left"></div>
-        <div class="middle">8</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square8">
+        <div class="hexagontent">
+            8
+        </div>
     </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="blankhexagon"></div>
+    <div class="hexagon" id="square18">
+        <div class="hexagontent">
+            18
+        </div>
     </div>
-    <div class="hex even">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex">
-        <div class="blankleft"></div>
-        <div class="blankmiddle"></div>
-        <div class="blankright"></div>
-    </div>
-    <div class="hex even">
-        <div class="left"></div>
-        <div class="middle">18</div>
-        <div class="right"></div>
-    </div>
-    <div class="hex" id="20">
-        <div class="left"></div>
-        <div class="middle">20</div>
-        <div class="right"></div>
+    <div class="hexagon" id="square20">
+        <div class="hexagontent">
+            20
+        </div>
     </div>
 </div>
+<script src="EndgameJS.js" type='text/javascript'></script>
 
 </body>
 </html>
