@@ -58,3 +58,70 @@
 .hex.even {
     margin-top: 53px;
 }
+
+.hex2 {
+    float: left;
+    margin-right: -26px;
+    margin-bottom: -50px;
+    text-align: left;
+}
+
+.hex2 .left {
+    float: left;
+    width: 0;
+    border-right: 30px solid #FF00FF;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+
+.hex2 .middle {
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: #FF00FF;
+}
+
+.hex2 .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid #FF00FF;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+
+.hexagon {
+    position: relative;
+    display: inline-block;
+    /* left/right margin approx. 25% of .hexagon width + spacing */
+    margin: 1px 18px;
+    background-color: #FF00FF;
+    text-align: center;
+}
+
+.hexagon, .hexagon::before, .hexagon::after {
+    /* easy way: height is width * 1.732
+    actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+    remove border-radius for sharp corners on hexagons */
+    width: 67px;
+    height: 116px;
+}
+
+.hexagon::before, .hexagon::after {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.hexagon::before {
+    transform: rotate(-60deg);
+}
+
+.hexagon::after {
+    transform: rotate(60deg);
+}
+
+.hexagon:nth-child(even) {
+    /* top approx. 50% of .hexagon height + spacing */
+    top: 59px;
+}
