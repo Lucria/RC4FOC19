@@ -1,9 +1,9 @@
 function testFunction() {
     // Functin tested working
-    const myElement = document.getElementById("square8");
+    const myElement = document.getElementById("square1");
     myElement.style.backgroundColor = "#FF00FF";
     var database = firebase.database();
-    writeUserData("square1", "red");
+    writeUserData("square1", "cyan");
     console.log("DONE");
 }
 
